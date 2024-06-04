@@ -1,0 +1,144 @@
+/* 下拉菜单样式 */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    background-color: #202124;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 360px;
+    z-index: 10;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.close-button {
+    position: absolute;
+    top: 16px; /* 调整关闭按钮位置 */
+    right: 16px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px; /* 加大关闭按钮 */
+    cursor: pointer;
+}
+
+.user-profile:hover .dropdown-menu {
+    display: block;
+}
+
+.account-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+}
+
+.profile-image-container {
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.profile-image-container img {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #36d679;
+}
+
+.edit-icon {
+    position: absolute;
+    bottom: -8px; /* 调整编辑图标位置 */
+    right: -8px;
+    color: white;
+    background-color: #4285F4;  /* 蓝色背景 */
+    padding: 8px;  /* 增加内边距 */
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+}
+
+.account-details {
+    text-align: center; /* 文字居中 */
+}
+
+.account-details .email {
+    font-size: 15px;
+    color: #bdc1c6;
+    margin: 4px 0;
+}
+
+.account-details .name {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+}
+
+.manage-account {
+    display: block;
+    background-color: #1a73e8;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 20px; /* 增加圆角半径，形成胶囊形状 */
+    margin: 5px auto; /* 上下外边距，左右自动居中 */
+    width: auto; /* 宽度自动 */
+    box-sizing: border-box;
+    font-weight: normal;
+    box-shadow: none;
+    text-align: center;
+}
+
+.menu-actions {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 16px;
+    gap: 0;
+    border-radius: 8px; /* 圆角 */
+}
+
+.menu-actions button {
+    border: 1px solid #303134; /* 添加边框 */
+    color: #bdc1c6;
+    background-color: #181818;
+    cursor: pointer;
+    padding: 16px 24px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    width: calc(50% - 1px);
+    box-sizing: border-box;
+}
+
+.menu-actions button:first-child {
+    border-radius: 30px 0 0 30px; /* 左半胶囊形状 */
+}
+
+.menu-actions button:last-child {
+    border-radius: 0 30px 30px 0; /* 右半胶囊形状 */
+}
+
+
+.menu-actions button:hover {
+    background-color: #303134;
+}
+
+.menu-actions i {
+    font-size: 16px; /* 加大图标 */
+}
+
+.footer {
+    padding: 12px;
+    font-size: 13px; /* 加大字体 */
+    color: #bdc1c6;
+    text-align: center;
+}
+
+.footer a {
+    color: #bdc1c6;
+    text-decoration: none;
+}

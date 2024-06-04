@@ -1,0 +1,18 @@
+/* 用户头像样式 */
+.user-profile {
+    position: relative;
+}
+
+.user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.user-profile:hover img {
+    transform: scale(1.1);
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown to Main Page</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            background-color: #ffbcbc;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        #countdownMessage {
+            font-size: 36px;
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .Message{
+            width: 550px;
+            height: 400px;
+            display: flex;
+            border-radius: 15px;
+            justify-content: center;
+            align-content: center;
+            background: linear-gradient(
+            to right bottom,
+            rgba(255,255,255,.7),
+            rgba(255,255,255,.5),
+            rgba(255,255,255,.4),
+            );
+            /*背景模糊化*/
+            backdrop-filter:blur(10px);
+            box-shadow: 0 0 20px #a29bfe;
+        }
+    </style>
+</head>
+<body>
+
+<div class="Message" id="countdownMessage"></div>
+
+<script>
+    // 设置倒计时时间（单位：秒）
+    var countdownTime = 3;
+
+    // 显示倒计时数字，并在倒计时结束后跳转到主页
+    var countdown = function () {
+        var countdownMessage = document.getElementById('countdownMessage');
+        countdownMessage.textContent = countdownTime + "秒后进入主页";
+
+        // 倒计时结束后跳转到主页
+        if (countdownTime <= 0) {
+            window.location.href = "mainpage.html";
+        } else {
+            // 更新倒计时数字，实时显示
+            countdownTime--;
+            setTimeout(countdown, 1000);
+        }
+    };
+
+    // 开始倒计时
+    countdown();
+</script>
+
+</body>
+</html>

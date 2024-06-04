@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties resource="db.properties" />
+    <typeAliases>
+        <!-- 为 java 类型命名 -->
+        <typeAlias alias="User" type="com.Demo.pojo.User"/>
+        <typeAlias alias="UserExtra" type="com.Demo.pojo.UserExtra"/>
+
+    </typeAliases>
+    <!--
+      environments：配置数据库连接环境信息。可以配置多个environment，通过default属性切换不同的
+    environment
+    -->
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+
+            <dataSource type="POOLED">
+                <!--数据库连接信息-->
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql:///web?useSSL=false"/>
+                <property name="username" value="root"/>
+                <property name="password" value="hdyzds@123"/>
+            </dataSource>
+        </environment>
+        <environment id="test">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <!--数据库连接信息-->
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/web"/>
+                <property name="username" value="root"/>
+                <property name="password" value="hdyzds@123"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <package name="com.Demo.Mapper"/>
+        <package name="com.Demo.pojo"/>
+    </mappers>
+
+</configuration>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ch">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页</title>
+    <!-- 导入字体图标 -->
+    <link rel="stylesheet" href="./font_mw3z7ts489g/iconfont.css">
+    <link rel="stylesheet" href="../Css/index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+<div class="shell">
+    <div class="container a-container" id="a-container">
+        <form action="registerServlet" method="post" class="form" id="a-form">
+            <h2 class="form_title title">创建账号</h2>
+            <div class="form_icons">
+                <i class="iconfont icon-QQ"></i>
+                <i class="iconfont icon-weixin"></i>
+                <i class="iconfont icon-bilibili-line"></i>
+            </div>
+            <span class="form_span">使用手机号码注册</span>
+            <input type="text" class="form_input" placeholder="Name" id="username">
+            <input type="text" class="form_input" placeholder="Phone" id="phone">
+            <input type="password" class="form_input" placeholder="Password" id="password">
+            <button class="form_button button submit" onclick="signup()">注 册</button>
+        </form>
+    </div>
+
+    <div class="container b-container" id="b-container">
+        <form action="loginServlet" method="get" class="form" id="b-form">
+            <h2 class="form_title title">登入账号</h2>
+            <div class="form_icons">
+                <i class="iconfont icon-QQ"></i>
+                <i class="iconfont icon-weixin"></i>
+                <i class="iconfont icon-bilibili-line"></i>
+            </div>
+            <span class="form_span">使用手机号码登录</span>
+            <input type="text" class="form_input" placeholder="Phone" id="loginPhone">
+            <input type="password" class="form_input" placeholder="Password" id="loginPassword">
+            <a class="form_link">忘记密码？</a>
+            <button class="form_button button submit" onclick="login()">登 陆</button>
+        </form>
+    </div>
+
+    <div class="switch" id="switch-cnt">
+        <div class="switch_circle"></div>
+        <div class="switch_circle switch_circle-t"></div>
+        <div class="switch_container" id="switch-c1">
+            <h2 class="switch_title title" style="letter-spacing: 0;">欢迎回来！</h2>
+            <p class="switch_description description">已经有账号了嘛，去登入账号来进入奇妙世界吧！！！</p>
+            <button class="switch_button button switch-btn">登 陆</button>
+        </div>
+
+        <div class="switch_container is-hidden" id="switch-c2">
+            <h2 class="switch_title title" style="letter-spacing: 0;">你好朋友！</h2>
+            <p class="switch_description description">去注册一个账号，成为尊贵的粉丝会员，让我们踏入奇妙的旅途！</p>
+            <button class="switch_button button switch-btn">注 册</button>
+        </div>
+    </div>
+</div>
+
+
+<script src="../Js/index.js"></script>
+<script src="../Js/login.js"></script>
+<script src="../Js/signup.js"></script>
+</body>
+
+</html>

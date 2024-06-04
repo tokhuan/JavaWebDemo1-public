@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>账号编辑</title>
+    <link rel="stylesheet" href="../Css/account_edit.css">
+</head>
+<body>
+<div class="container">
+    <h2>账号编辑</h2>
+    <form id="edit-form">
+        <div class="form-group profile-image-container" id="profileImageContainer">
+            <img id="profile-image-preview" src="../Images/IMG_0264.JPG" alt="头像预览">
+            <label for="profile-image" class="edit-image-button">编辑头像</label>
+            <input type="file" id="profile-image" accept="image/*">
+        </div>
+        <div class="form-group">
+            <label for="username">用户名:</label>
+            <input type="text" id="username" name="username">
+        </div>
+        <div class="form-group">
+            <label for="email">邮箱:</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="password">密码:</label>
+            <input type="password" id="password" name="password" placeholder="不修改则留空">
+        </div>
+        <div class="form-group">
+            <label for="gender">性别:</label>
+            <select id="gender" name="gender">
+                <option value="">请选择性别</option>
+                <option value="男">男</option>
+                <option value="女">女</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="save-button">保存修改</button>
+        </div>
+    </form>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../Js/demo.js"></script>
+</body>
+</html>

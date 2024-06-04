@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konchok</title>
+    <link rel="stylesheet" href="../Css/UserImage.css">
+    <link rel="stylesheet" href="../Css/DropdownMenu.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vibrant.js/1.0.0/Vibrant.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css" /> -->
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        header{
+            background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../Images/IMG_0263.JPG);
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+
+        ul{
+            float: right;
+            list-style-type: none;
+            margin: 15px;
+        }
+        ul li{
+            display: inline-block;
+        }
+
+        ul li a{
+            text-decoration: none;
+            color: #fff;
+            padding: 5px 20px;
+            border: 1px solid transparent;
+            transition: .6s ease;
+            border-radius: 20px;
+        }
+
+        ul li a:hover{
+            background-color: #fff;
+            color: #000;
+        }
+        ul li.active a{
+            background-color: #fff;
+            color: #000;
+        }
+        .title{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        }
+        .title h1{
+            color: #fff;
+            font-size: 70px;
+            font-family: Century Gothic,serif;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="main">
+        <ul>
+            <li class="active"><a href="#">首页</a></li>
+            <li><a href="https://www.baidu.com" target="_blank">百度</a></li>
+            <li><a href="https://www.china.com" target="_blank">中华网</a></li>
+            <li class="user-profile">
+                <img src="../Images/IMG_0264.JPG" alt="User Profile" id="profileImage">
+                <div class="dropdown-menu">
+                    <button class="close-button">&times;</button> <div class="account-info">
+                    <div class="profile-image-container">
+                        <img src="https://via.placeholder.com/80" alt="Profile Image">
+                        <i class="fas fa-pen edit-icon"></i>
+                    </div>
+                    <div class="account-details">
+                        <p class="phone"></p>
+                        <p class="name"></p>
+                        <a href="UserEdit.html" class="manage-account">管理您的账号信息</a>
+                    </div>
+                </div>
+                    <div class="menu-actions">
+                        <button class="add-account"><i class="fas fa-plus"></i> 添加账号</button>
+                        <button class="sign-out"><i class="fas fa-sign-out-alt"></i> 退出账号</button>
+                    </div>
+                    <div class="footer">
+                        <a href="#">隐私权政策</a> - <a href="#">服务条款</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="title">
+        <h1><span style="color: #ffa500;">Star</span>mania</h1>
+    </div>
+</header>
+
+<script src="../Js/dropmenu.js"></script>
+<script src="../Js/image-boder.js"></script>
+<script src="../Js/mainpage.js"></script>
+</body>
+</html>
